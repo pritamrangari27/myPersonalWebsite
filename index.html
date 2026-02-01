@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pritam Rangari - IT Engineering Student</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#home">Pritam Rangari</a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#education" class="nav-link">Education</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <!-- typed-text is separate so JS types plaintext here; highlighted name stays as HTML -->
+                <h1 class="hero-title"><span id="hero-typed" aria-hidden="true"></span> <span class="highlight">Pritam Rangari</span></h1>
+                <p class="hero-subtitle">IT Engineering Student</p>
+                <p class="hero-description">
+                    Passionate about technology and innovation. Currently pursuing Information Technology 
+                    at AISSMS Institute of Information Technology, Pune.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">Get In Touch</a>
+                    <a href="#projects" class="btn btn-secondary">View My Work</a>
+                </div>
+                <div class="hero-social">
+                    <a href="https://github.com/pritamrangari27" target="_blank" class="social-link" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/pritamrangari?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="social-link" title="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:pritamrangari125@gmail.com" class="social-link" title="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://www.instagram.com/_pritam2527/" target="_blank" class="social-link" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="profile-pic">
+                    <img src="https://avatars.githubusercontent.com/u/228579634?v=4" alt="Pritam Rangari" id="profile-img" onerror="this.src='https://via.placeholder.com/400x400/667eea/ffffff?text=PR'">
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <a href="#about">
+                <div class="scroll-arrow">
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Get to know more about who I am</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Hello! I'm Pritam Rangari</h3>
+                    <p>
+                        I'm a dedicated Information Technology Engineering student at AISSMS Institute 
+                        of Information Technology, Pune. My journey in technology began with a curiosity about 
+                        how things work, and has evolved into a passion for creating innovative solutions.
+                    </p>
+                    <p>
+                        I serve as the Treasurer of the IOIT ITSA committee and actively participate in technical clubs and events.
+                    </p>
+                    <p>
+                        I specialize in web development, software engineering, and emerging technologies. 
+                        My goal is to leverage technology to solve real-world problems and create meaningful 
+                        digital experiences.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <h4>10+</h4>
+                            <p>Projects Completed</p>
+                        </div>
+                        <div class="stat">
+                            <h4>3+</h4>
+                            <p>Years of Study</p>
+                        </div>
+                        <div class="stat">
+                            <h4>5+</h4>
+                            <p>Technologies</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="about-pic">
+                        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=300&h=400&fit=crop&auto=format&q=80" alt="About Pritam" onerror="this.src='https://via.placeholder.com/300x400/3498db/ffffff?text=About+Me'">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Skills & Technologies</h2>
+                <p class="section-subtitle">Technologies I work with</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Frontend Development</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <i class="fab fa-html5"></i>
+                            <span>HTML5</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-css3-alt"></i>
+                            <span>CSS3</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-js"></i>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-react"></i>
+                            <span>React</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Backend Development</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <i class="fab fa-node-js"></i>
+                            <span>Node.js</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-python"></i>
+                            <span>Python</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-database"></i>
+                            <span>MongoDB</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-server"></i>
+                            <span>Express.js</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Programming Languages</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <i class="fab fa-java"></i>
+                            <span>Java</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-python"></i>
+                            <span>Python</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-code"></i>
+                            <span>C++</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-js"></i>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools & Technologies</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <i class="fab fa-git-alt"></i>
+                            <span>Git</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-cloud"></i>
+                            <span>AWS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">Some of my recent work</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&h=400&fit=crop&auto=format&q=80" alt="E-Commerce Website" onerror="this.src='https://via.placeholder.com/600x400/e74c3c/ffffff?text=E-Commerce+Website'">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/pritamrangari27/crimeManagementSystem" class="project-link" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="https://github.com/pritamrangari27/crimeManagementSystem" class="project-link" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>CrimeManagementSystem</h3>
+                        <p>A project for managing crime records and basic admin workflows. Published paper: <a href="https://www.ijarsct.co.in/Paper24963.pdf" target="_blank">IJARSCT Paper</a>. See repository for details and setup.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Flask</span>
+                            <span class="tech-tag">SQLite</span>
+                        </div>
+                        <div class="project-links" style="margin-top:12px;">
+                            <a href="https://github.com/pritamrangari27/crimeManagementSystem" class="project-link" target="_blank" title="View repo">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop&auto=format&q=80" alt="Task Management App" onerror="this.src='https://via.placeholder.com/600x400/2ecc71/ffffff?text=Task+Management+App'">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/pritamrangari27/songSuggestorViaFaceDetection" class="project-link" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="https://github.com/pritamrangari27/songSuggestorViaFaceDetection" class="project-link" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>songSuggestorViaFaceDetection</h3>
+                        <p>A creative web app that suggests songs based on face detection. Frontend HTML/CSS with simple detection-based interactions.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Face Detection</span>
+                        </div>
+                        <div class="project-links" style="margin-top:12px;">
+                            <a href="https://github.com/pritamrangari27/songSuggestorViaFaceDetection" class="project-link" target="_blank" title="View repo">
+                                <i class="fab fa-github"></i>
+                            </a> 
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=600&h=400&fit=crop&auto=format&q=80" alt="Weather App" onerror="this.src='https://via.placeholder.com/600x400/f39c12/ffffff?text=Weather+App'">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/pritamrangari27/faceDetectionUsingStramlit" class="project-link" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="https://github.com/pritamrangari27/faceDetectionUsingStramlit" class="project-link" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>faceDetectionUsingStramlit</h3>
+                        <p>A Streamlit application demonstrating face detection using Python — useful for quick demos and prototypes.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Streamlit</span>
+                            <span class="tech-tag">OpenCV</span>
+                        </div>
+                        <div class="project-links" style="margin-top:12px;">
+                            <a href="https://github.com/pritamrangari27/faceDetectionUsingStramlit" class="project-link" target="_blank" title="View repo">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- New project: ESP32 Voice Assistant -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&h=400&fit=crop&auto=format&q=80" alt="ESP32 Voice Assistant" onerror="this.src='https://via.placeholder.com/600x400/95a5a6/ffffff?text=ESP32+Voice+Assistant'">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/pritamrangari27/ESP32-Based-Voice-Assistant" class="project-link" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="https://github.com/pritamrangari27/ESP32-Based-Voice-Assistant" class="project-link" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>ESP32 Voice Assistant Integrating Gemini AI</h3>
+                        <p>An ESP32-based voice assistant integrating Gemini AI and mobile speech recognition. Published paper: <a href="https://www.ijarsct.co.in/Paper25577.pdf" target="_blank">IJARSCT Paper</a>.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">ESP32</span>
+                            <span class="tech-tag">Speech Recognition</span>
+                            <span class="tech-tag">AI Integration</span>
+                        </div>
+                        <div class="project-links" style="margin-top:12px;">
+                            <a href="https://github.com/pritamrangari27/ESP32-Based-Voice-Assistant" class="project-link" target="_blank" title="View repo">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- New project: Smart Shopping Basket (RFID) -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?w=600&h=400&fit=crop&auto=format&q=80" alt="Smart Shopping Basket" onerror="this.src='https://via.placeholder.com/600x400/8e44ad/ffffff?text=Smart+Basket'">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/pritamrangari27" class="project-link" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="https://github.com/pritamrangari27" class="project-link" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Smart Shopping Basket</h3>
+                        <p>A smart shopping basket that reads RFID tags on products using an RFID reader and maintains a live list of items in the basket. Designed as a Project-Based Learning demo with embedded firmware and a small web/dashboard view for the checkout summary.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">RFID</span>
+                            <span class="tech-tag">ESP32</span>
+                            <span class="tech-tag">Embedded C</span>
+                        </div>
+                        <div class="project-links" style="margin-top:12px;">
+                            <a href="#" class="project-link" target="_blank" title="View repo">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- New project: Bank Management System (C++) -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=600&h=400&fit=crop&auto=format&q=80" alt="Bank Management System" onerror="this.src='https://via.placeholder.com/600x400/2c3e50/ffffff?text=Bank+System'">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/pritamrangari27" class="project-link" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="https://github.com/pritamrangari27" class="project-link" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Bank Management System - C++</h3>
+                        <p>Console-based, menu-driven application implemented in C++ supporting account creation, deposit, withdrawal and balance queries. Uses arrays and linked lists to store and manage user account details — a great learning project for data structures and file I/O.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">C++</span>
+                            <span class="tech-tag">Console App</span>
+                            <span class="tech-tag">Linked List</span>
+                        </div>
+                        <div class="project-links" style="margin-top:12px;">
+                            <a href="#" class="project-link" target="_blank" title="View repo">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Education</h2>
+                <p class="section-subtitle">My academic journey</p>
+            </div>
+            <div class="education-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Bachelor of Engineering - Information Technology</h3>
+                        <h4>AISSMS Institute of Information Technology, Pune</h4>
+                        <p class="timeline-date">2023- 2027</p>
+                        <p>Currently in 3rd year, maintaining strong academic performance with focus on software development, data structures, algorithms, and emerging technologies.</p>
+                        <ul>
+                            <li>Relevant Coursework: Data Structures, Algorithms, Database Management, Web Development, Software Engineering</li>
+                            <li>Active member of coding club and technical societies</li>
+                            <li>Participated in various hackathons and technical competitions</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Higher Secondary Certificate (HSC)</h3>
+                        <h4>Shri Ramkrishna Krida Mahavidyalay, Amravati (Science Stream)</h4>
+                        <p class="timeline-date">2020 - 2022</p>
+                        <p>Completed with distinction in Physics, Chemistry, Mathematics, and Computer Science, laying a strong foundation for engineering studies.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Let's work together</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <p>pritamrangari125@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Phone</h3>
+                            <p>+91 87675 31150</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Location</h3>
+                            <p>Pune, Maharashtra, India</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contact-form" action="https://formspree.io/f/xkgvlowb" method="POST">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2025 Pritam Rangari. All rights reserved.</p>
+                </div>
+                <div class="footer-social">
+                    <a href="https://github.com/pritamrangari27" target="_blank" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/pritamrangari?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://www.instagram.com/_pritam2527/" target="_blank" class="social-link">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="mailto:pritamrangari125@gmail.com" class="social-link">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -184,7 +184,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const originalText = submitButton.textContent;
 
             // TODO: replace with your Formspree endpoint (e.g. https://formspree.io/f/XXXXXXXX)
-            const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xkgvlowb';
+            const FORMSPREE_ENDPOINT = 'replace with your Formspree endpoint';
 
             submitButton.textContent = 'Sending...';
             submitButton.disabled = true;

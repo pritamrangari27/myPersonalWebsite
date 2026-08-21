@@ -7,7 +7,7 @@
 
 html {
     scroll-behavior: smooth;
-    font-size: 16px;
+    font-size: clamp(14px, 1.2vw + 10px, 18px); /* Fluid typography */
 }
 
 body {
@@ -22,15 +22,7 @@ body {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* Fluid typography: scale base font-size between 14px and 18px */
-@media (min-width: 1200px) {
-    html { font-size: 18px; }
-}
-@media (max-width: 480px) {
-    html { font-size: 14px; }
+    padding: 0 clamp(15px, 5vw, 40px);
 }
 
 /* Navigation */
@@ -320,13 +312,16 @@ body {
 }
 
 .profile-pic {
-    width: 350px;
-    height: 350px;
+    width: 100%;
+    max-width: 350px;
+    aspect-ratio: 1 / 1;
+    height: auto;
     border-radius: 50%;
     overflow: hidden;
     border: 8px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
     position: relative;
+    margin: 0 auto;
 }
 
 .profile-pic img {
@@ -687,7 +682,7 @@ section {
     background: rgba(30, 41, 59, 0.5);
     border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 20px;
-    padding: 2rem;
+    padding: clamp(1.2rem, 4vw, 2rem);
     backdrop-filter: blur(10px);
     transition: all 0.4s ease;
 }
@@ -775,6 +770,7 @@ section {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
     position: relative;
+    padding: clamp(1rem, 3vw, 2rem); /* Fluid padding for publications */
 }
 
 .project-card:hover {
@@ -1475,39 +1471,40 @@ section {
         font-size: 2rem;
     }
     
-    .skill-pro-card {
-        padding: 1.5rem;
-    }
-    
     .projects-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
-        padding: 5px;
     }
     
-    .project-card {
-        padding: 1.2rem !important; /* Fix publication cards being too tall */
-    }
-
     .project-card:hover {
-        transform: translateY(-2px); /* Even less movement on small screens */
+        transform: translateY(-2px);
     }
     
-    .profile-pic {
-        width: 250px;
-        height: 250px;
-    }
-
-    /* Fix Chatbot going off screen on mobile */
+    /* Chatbot Mobile Drawer Effect */
     .chatbot-wrapper {
         right: 15px;
         bottom: 15px;
     }
 
     .chatbot-window {
-        width: calc(100vw - 30px);
+        position: fixed;
+        width: 100vw;
+        height: 85vh;
+        bottom: 0;
         right: 0;
-        bottom: 70px;
+        left: 0;
+        border-radius: 20px 20px 0 0;
+        transform: translateY(100%);
+        transform-origin: bottom center;
+        transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    
+    .chatbot-window.active {
+        transform: translateY(0);
+    }
+    
+    .chatbot-messages {
+        height: calc(85vh - 130px);
     }
     
     /* Fix Contact Form overflowing */

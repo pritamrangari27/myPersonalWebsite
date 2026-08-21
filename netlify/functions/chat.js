@@ -1,4 +1,4 @@
-exports.handler = async function(event, context) {
+exports.handler = async function (event, context) {
     // Only allow POST requests
     if (event.httpMethod !== 'POST') {
         return { statusCode: 405, body: 'Method Not Allowed' };
@@ -16,7 +16,7 @@ exports.handler = async function(event, context) {
         }
 
         const apiKey = process.env.GEMINI_API_KEY;
-        
+
         if (!apiKey) {
             console.error("GEMINI_API_KEY is not set in environment variables");
             return {
@@ -58,7 +58,7 @@ Keep your answers brief, professional, and friendly. Answer any questions the us
         }
 
         const data = await response.json();
-        
+
         // Extract the text response from the Gemini API format
         const replyText = data.candidates?.[0]?.content?.parts?.[0]?.text || "I'm sorry, I couldn't generate a response at this moment.";
 
@@ -66,7 +66,7 @@ Keep your answers brief, professional, and friendly. Answer any questions the us
             statusCode: 200,
             body: JSON.stringify({ reply: replyText })
         };
-        
+
     } catch (error) {
         console.error("Error in chat function:", error);
         return {

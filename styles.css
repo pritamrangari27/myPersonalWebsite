@@ -1319,11 +1319,7 @@ section {
     .container { padding: 0 15px; }
 }
 
-@media (max-width: 420px) {
-    .profile-pic { width: 220px; height: 220px; }
-    .hero-title { font-size: 1.6rem; }
-    .hero-subtitle { font-size: 1rem; }
-}
+
 
 .footer-social {
     display: flex;
@@ -1480,6 +1476,12 @@ section {
 @media (max-width: 480px) {
     .container {
         padding: 0 10px;
+    }
+    
+    .profile-pic { 
+        width: 180px; 
+        height: 180px; 
+        border-width: 4px; /* Slightly thinner border for a smaller image */
     }
     
     .hero-title { font-size: 1.8rem; }

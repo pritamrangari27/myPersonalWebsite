@@ -1501,29 +1501,33 @@ section {
         padding: 0.5rem 0 0 0;
     }
     
-    .project-info h3 {
-        font-size: 0.85rem;
-        margin-bottom: 0.3rem;
+    .project-card h3 {
+        font-size: 0.85rem !important;
+        margin-bottom: 0.3rem !important;
+        line-height: 1.2;
     }
     
-    .project-info p {
-        font-size: 0.7rem;
-        margin-bottom: 0.5rem;
-        display: -webkit-box;
-        -webkit-line-clamp: 3;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
+    .project-card h4 {
+        font-size: 0.75rem !important;
+        margin-bottom: 0.3rem !important;
     }
     
-    .tech-tag {
-        padding: 0.15rem 0.4rem;
-        font-size: 0.6rem;
+    .project-card p,
+    .project-tech {
+        display: none !important;
     }
     
     .project-link {
         width: 32px;
         height: 32px;
         font-size: 0.9rem;
+        margin-top: 4px !important;
+    }
+    
+    .project-card .btn-outline {
+        padding: 4px 10px !important;
+        font-size: 0.75rem !important;
+        margin-top: 4px !important;
     }
     
     /* Chatbot window made smaller */

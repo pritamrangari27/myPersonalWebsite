@@ -1407,6 +1407,10 @@ section {
         flex-wrap: wrap;
     }
     
+    .hero-social {
+        justify-content: center;
+    }
+    
     .about-layout {
         grid-template-columns: 1fr;
         text-align: center;

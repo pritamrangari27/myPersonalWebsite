@@ -1468,7 +1468,7 @@ section {
     }
     
     .hero-title {
-        font-size: 2rem;
+        font-size: 1.8rem; /* Made slightly smaller so it doesn't wrap awkwardly */
     }
     
     .section-title {
@@ -1485,12 +1485,33 @@ section {
         padding: 5px;
     }
     
+    .project-card {
+        padding: 1.2rem !important; /* Fix publication cards being too tall */
+    }
+
     .project-card:hover {
-        transform: translateY(-5px); /* Even less movement on small screens */
+        transform: translateY(-2px); /* Even less movement on small screens */
     }
     
     .profile-pic {
         width: 250px;
         height: 250px;
+    }
+
+    /* Fix Chatbot going off screen on mobile */
+    .chatbot-wrapper {
+        right: 15px;
+        bottom: 15px;
+    }
+
+    .chatbot-window {
+        width: calc(100vw - 30px);
+        right: 0;
+        bottom: 70px;
+    }
+    
+    /* Fix Contact Form overflowing */
+    .contact-form-panel {
+        padding: 1.5rem 1rem;
     }
 }

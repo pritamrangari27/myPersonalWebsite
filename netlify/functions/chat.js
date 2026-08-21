@@ -1,3 +1,5 @@
+const https = require('https');
+
 exports.handler = async function (event, context) {
     // Only allow POST requests
     if (event.httpMethod !== 'POST') {
@@ -34,30 +36,40 @@ He is available for freelance work and internships. His email is pritamrangari12
 Keep your answers brief, professional, and friendly. Answer any questions the user asks based on this context or general knowledge.`;
 
         // Prepare the request for Gemini 1.5 Flash API
-        const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                contents: [
-                    {
-                        role: "user",
-                        parts: [
-                            { text: systemPrompt + "\n\nUser Question: " + userMessage }
-                        ]
-                    }
-                ]
-            })
+        const payloadData = JSON.stringify({
+            contents: [{ role: "user", parts: [{ text: systemPrompt + "\n\nUser Question: " + userMessage }] }]
         });
-
-        if (!response.ok) {
-            const errorText = await response.text();
-            console.error("Gemini API Error:", errorText);
-            throw new Error(`Gemini API responded with status: ${response.status}`);
-        }
-
-        const data = await response.json();
+        
+        const data = await new Promise((resolve, reject) => {
+            const req = https.request({
+                hostname: 'generativelanguage.googleapis.com',
+                port: 443,
+                path: `/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`,
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Content-Length': Buffer.byteLength(payloadData)
+                }
+            }, (res) => {
+                let body = '';
+                res.on('data', (chunk) => body += chunk);
+                res.on('end', () => {
+                    if (res.statusCode >= 200 && res.statusCode < 300) {
+                        try {
+                            resolve(JSON.parse(body));
+                        } catch (e) {
+                            reject(new Error("Failed to parse JSON response"));
+                        }
+                    } else {
+                        console.error("Gemini API Error:", body);
+                        reject(new Error(`Gemini API responded with status: ${res.statusCode}`));
+                    }
+                });
+            });
+            req.on('error', (e) => reject(e));
+            req.write(payloadData);
+            req.end();
+        });
 
         // Extract the text response from the Gemini API format
         const replyText = data.candidates?.[0]?.content?.parts?.[0]?.text || "I'm sorry, I couldn't generate a response at this moment.";

@@ -7,15 +7,21 @@
 
 html {
     scroll-behavior: smooth;
-    font-size: clamp(14px, 1.2vw + 10px, 18px); /* Fluid typography */
+    font-size: clamp(14px, 1.2vw + 10px, 18px);
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     line-height: 1.6;
-    color: #333;
-    background-color: #fff;
+    color: #111;
+    background-color: #fafafa;
     overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, .nav-logo a {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.02em;
 }
 
 /* Container */
@@ -118,7 +124,7 @@ body {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: #0f172a;
     color: white;
     position: relative;
     overflow: hidden;
@@ -131,8 +137,9 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 20"><defs><radialGradient id="a" cx="50%" cy="40%"><stop offset="0%" stop-color="%23ffffff" stop-opacity="0.1"/><stop offset="100%" stop-color="%23ffffff" stop-opacity="0"/></radialGradient></defs><rect width="100%" height="100%" fill="url(%23a)"/></svg>');
-    opacity: 0.3;
+    background: radial-gradient(circle at top right, rgba(56, 189, 248, 0.15), transparent 40%),
+                radial-gradient(circle at bottom left, rgba(59, 130, 246, 0.15), transparent 40%);
+    opacity: 1;
 }
 
 .hero-container {
@@ -258,14 +265,16 @@ body {
 }
 
 .btn-primary {
-    background: linear-gradient(45deg, #ff6b6b, #ffd93d);
-    color: white;
-    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+    background: #38bdf8;
+    color: #0f172a;
+    box-shadow: 0 4px 15px rgba(56, 189, 248, 0.2);
 }
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+    box-shadow: 0 6px 20px rgba(56, 189, 248, 0.3);
+    background: #0ea5e9;
+    color: white;
 }
 
 .btn-secondary {
@@ -316,10 +325,10 @@ body {
     max-width: 350px;
     aspect-ratio: 1 / 1;
     height: auto;
-    border-radius: 50%;
+    border-radius: 20px;
     overflow: hidden;
-    border: 8px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
     position: relative;
     margin: 0 auto;
 }
@@ -765,17 +774,21 @@ section {
 
 .project-card {
     background: white;
-    border-radius: 15px;
+    border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
     transition: all 0.3s ease;
     position: relative;
-    padding: clamp(1rem, 3vw, 2rem); /* Fluid padding for publications */
+    padding: clamp(1rem, 3vw, 1.5rem);
+    display: flex;
+    flex-direction: column;
 }
 
 .project-card:hover {
-    transform: translateY(-8px); /* Reduced from -10px to prevent overflow */
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
+    border-color: #cbd5e1;
 }
 
 .project-image {
@@ -1041,16 +1054,20 @@ section {
 
 .input-group input,
 .input-group textarea {
+    display: block;
     width: 100%;
     padding: 1rem 1rem 1rem 0;
     font-size: 1rem;
-    color: #2c3e50;
+    color: #0f172a;
     border: none;
-    border-bottom: 2px solid #ecf0f1;
+    border-bottom: 2px solid #e2e8f0;
+    border-radius: 0;
     outline: none;
     background: transparent;
     transition: border-color 0.3s ease;
     resize: vertical;
+    -webkit-appearance: none;
+    appearance: none;
 }
 
 .input-group label {
@@ -1058,23 +1075,23 @@ section {
     top: 1rem;
     left: 0;
     font-size: 1rem;
-    color: #95a5a6;
+    color: #64748b;
     pointer-events: none;
     transition: all 0.3s ease;
+    transform-origin: left top;
 }
 
 .input-group input:focus,
 .input-group textarea:focus {
-    border-bottom-color: #3498db;
+    border-bottom-color: #38bdf8;
 }
 
 .input-group input:focus ~ label,
 .input-group input:not(:placeholder-shown) ~ label,
 .input-group textarea:focus ~ label,
 .input-group textarea:not(:placeholder-shown) ~ label {
-    top: -12px;
-    font-size: 0.8rem;
-    color: #3498db;
+    transform: translateY(-24px) scale(0.85);
+    color: #38bdf8;
     font-weight: 600;
 }
 
@@ -1084,17 +1101,17 @@ section {
     gap: 0.8rem;
     width: 100%;
     justify-content: center;
-    padding: 1.2rem;
-    font-size: 1.1rem;
-    border-radius: 10px;
+    padding: 1rem;
+    font-size: 1.05rem;
+    border-radius: 8px;
 }
 
 /* Chatbot Styles */
 .chatbot-wrapper {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    z-index: 1000;
+    position: fixed !important;
+    bottom: 20px !important;
+    right: 20px !important;
+    z-index: 9999 !important;
 }
 
 .chatbot-toggle-btn {
@@ -1290,11 +1307,11 @@ section {
     
     /* Prevent overflow on tablet screens */
     .skills-grid { 
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+        grid-template-columns: 1fr; 
         padding: 0 8px; 
     }
     .projects-grid { 
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+        grid-template-columns: 1fr; 
         padding: 8px; 
     }
     .container { padding: 0 15px; }
@@ -1460,55 +1477,104 @@ section {
 
 @media (max-width: 480px) {
     .container {
-        padding: 0 15px;
+        padding: 0 10px;
     }
     
-    .hero-title {
-        font-size: 1.8rem; /* Made slightly smaller so it doesn't wrap awkwardly */
-    }
+    .hero-title { font-size: 1.8rem; }
+    .section-title { font-size: 1.8rem; }
     
-    .section-title {
-        font-size: 2rem;
-    }
-    
+    /* 1x2 format for projects */
     .projects-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.8rem;
     }
     
-    .project-card:hover {
-        transform: translateY(-2px);
+    .project-card {
+        padding: 0.6rem;
     }
     
-    /* Chatbot Mobile Drawer Effect */
+    .project-image {
+        height: 90px;
+    }
+    
+    .project-info {
+        padding: 0.5rem 0 0 0;
+    }
+    
+    .project-info h3 {
+        font-size: 0.85rem;
+        margin-bottom: 0.3rem;
+    }
+    
+    .project-info p {
+        font-size: 0.7rem;
+        margin-bottom: 0.5rem;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+    
+    .tech-tag {
+        padding: 0.15rem 0.4rem;
+        font-size: 0.6rem;
+    }
+    
+    .project-link {
+        width: 32px;
+        height: 32px;
+        font-size: 0.9rem;
+    }
+    
+    /* Chatbot window made smaller */
     .chatbot-wrapper {
-        right: 15px;
-        bottom: 15px;
+        right: 15px !important;
+        bottom: 15px !important;
     }
 
     .chatbot-window {
         position: fixed;
-        width: 100vw;
-        height: 85vh;
-        bottom: 0;
-        right: 0;
-        left: 0;
-        border-radius: 20px 20px 0 0;
-        transform: translateY(100%);
-        transform-origin: bottom center;
+        width: calc(100vw - 30px);
+        height: 55vh;
+        bottom: 80px;
+        right: 15px;
+        left: 15px;
+        border-radius: 16px;
+        transform: scale(0);
+        transform-origin: bottom right;
         transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     }
     
     .chatbot-window.active {
-        transform: translateY(0);
+        transform: scale(1);
     }
     
     .chatbot-messages {
-        height: calc(85vh - 130px);
+        height: calc(55vh - 120px);
     }
     
-    /* Fix Contact Form overflowing */
+    /* Smaller Contact Form */
     .contact-form-panel {
-        padding: 1.5rem 1rem;
+        padding: 1rem 0.8rem;
+    }
+    
+    .input-group {
+        margin-bottom: 1.2rem;
+    }
+    
+    .input-group input,
+    .input-group textarea {
+        padding: 0.5rem 0.5rem 0.5rem 0;
+        font-size: 0.9rem;
+    }
+    
+    .input-group label {
+        font-size: 0.9rem;
+        top: 0.5rem;
+    }
+    
+    .submit-btn {
+        padding: 0.8rem;
+        font-size: 0.95rem;
     }
 }
